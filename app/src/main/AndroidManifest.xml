@@ -9,6 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ChefFilActivity"></activity>
+        <activity android:name=".EmploiDuTempsProfActivity" />
+        <activity android:name=".MessagerieProfActivity" />
+        <activity android:name=".ProfActivity" />
+        <activity android:name=".EspaceProfesseurActivity" />
+        <activity android:name=".ExamsActivity" />
+        <activity android:name=".EmploiDuTempsActivity" />
+        <activity android:name=".ScolariteActivity" />
+        <activity android:name=".MessagerieActivity" />
+        <activity android:name=".EvenementsActivity" />
+        <activity android:name=".EspaceEtudiantActivity" />
+        <activity android:name=".SignUpActivity" />
+        <activity android:name=".SignInActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

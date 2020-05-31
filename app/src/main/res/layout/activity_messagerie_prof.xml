@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#edf9fc"
+    tools:context=".MessagerieProfActivity">
+
+    <include
+        android:id="@+id/toolbar_espace_professeur"
+        layout="@layout/toolbar"
+        app:layout_constraintBottom_toTopOf="@+id/text_messagerie_prof" />
+
+    <TextView
+        android:id="@+id/text_messagerie_prof"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="76dp"
+        android:padding="20dp"
+        android:text="Messagerie"
+        android:textColor="#005792"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/envoyer_un_message_prof_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/envoyer_un_message_prof_button"
+        android:layout_width="274dp"
+        android:layout_height="111dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="72dp"
+        android:background="#005792"
+        android:padding="30dp"
+        android:text="Envoyer un message"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/consulter_les_messages_prof_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/consulter_les_messages_prof_button"
+        android:layout_width="274dp"
+        android:layout_height="111dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="176dp"
+        android:background="#005792"
+        android:padding="30dp"
+        android:text="Consulter les messages"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

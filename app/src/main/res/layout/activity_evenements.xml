@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#edf9fc"
+    tools:context=".EvenementsActivity">
+
+    <include
+        android:id="@+id/toolbar_espace_etudiant"
+        layout="@layout/toolbar"
+        app:layout_constraintBottom_toTopOf="@+id/text_evenements" />
+
+    <TextView
+        android:id="@+id/text_evenements"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="52dp"
+        android:padding="20dp"
+        android:text="Événements"
+        android:textColor="#005792"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/afficher_evenements_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/afficher_evenements_button"
+        android:layout_width="232dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="52dp"
+        android:background="#005792"
+        android:padding="30dp"
+        android:text="Afficher événements"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/creer_un_evenement_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/creer_un_evenement_button"
+        android:layout_width="232dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="196dp"
+        android:background="#005792"
+        android:padding="30dp"
+        android:text="Créer un événement"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.446"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
