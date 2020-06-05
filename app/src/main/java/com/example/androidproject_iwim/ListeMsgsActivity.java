@@ -1,8 +1,10 @@
 package com.example.androidproject_iwim;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.format.DateFormat;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -21,6 +23,8 @@ public class ListeMsgsActivity extends AppCompatActivity {
 
     private DatabaseReference mDatabase;
 
+    private Button mHome;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,9 +32,19 @@ public class ListeMsgsActivity extends AppCompatActivity {
 
         mDatabase = FirebaseDatabase.getInstance().getReference().child("Message");
 
+        mHome = (Button) findViewById(R.id.homeicon);
+
         mMsgList = (RecyclerView) findViewById(R.id.msg_list);
         mMsgList.setHasFixedSize(true);
         mMsgList.setLayoutManager(new LinearLayoutManager(this));
+
+        mHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent homeActivityIntent = new Intent(ListeMsgsActivity.this, EspaceEtudiantActivity.class);
+                startActivity(homeActivityIntent);
+            }
+        });
     }
 
     protected void onStart(){
