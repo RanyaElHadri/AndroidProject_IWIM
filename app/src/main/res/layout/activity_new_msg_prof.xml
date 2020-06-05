@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#edf9fc"
+    tools:context=".NewMessageActivity">
+
+    <include
+        android:id="@+id/toolbar_espace_etudiant"
+        layout="@layout/toolbar"
+        app:layout_constraintBottom_toTopOf="@+id/posterUnMsg" />
+
+    <TextView
+        android:id="@+id/posterUnMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp"
+        android:padding="20dp"
+        android:text="Poster un message"
+        android:textColor="#005792"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/msg_space"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.081"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/msg_space"
+        android:layout_width="331dp"
+        android:layout_height="293dp"
+        android:layout_marginBottom="64dp"
+        android:background="#FFFFFF"
+        android:hint="Veillez saisir votre message"
+        app:layout_constraintBottom_toTopOf="@+id/poster"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/poster"
+        android:layout_width="173dp"
+        android:layout_height="77dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="76dp"
+        android:background="#005792"
+        android:padding="30dp"
+        android:text="Poster"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

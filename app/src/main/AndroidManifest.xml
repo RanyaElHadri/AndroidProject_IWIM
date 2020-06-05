@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ListeMsgsActivity"></activity>
+        <activity android:name=".NewMsgProfActivity"></activity>
+        <activity android:name=".ListeMsgsActivity" />
         <activity android:name=".ListeEventsActivity" />
         <activity android:name=".NewEventActivity" />
         <activity android:name=".NewMessageActivity" />
