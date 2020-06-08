@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".veiw_pdf_files">
+    <include
+        android:id="@+id/listeMatieres"
+        layout="@layout/toolbar" />
+
+
+    <Button
+        android:id="@+id/homeicon"
+        android:layout_width="67dp"
+        android:layout_height="56dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="-4dp"
+        android:layout_marginRight="-4dp"
+        android:background="@drawable/homeicon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <ListView
+        android:id="@+id/myListView"
+        android:layout_width="match_parent"
+        android:layout_height="591dp"
+
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp">
+
+    </ListView>
+
+    <TextView
+        android:id="@+id/nom_matiere"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="608dp"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
+        android:text="nom matieres"
+        android:textAlignment="center"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

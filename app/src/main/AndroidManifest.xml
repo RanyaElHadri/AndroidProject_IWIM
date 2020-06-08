@@ -11,7 +11,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".NewMsgProfActivity"></activity>
+        <activity android:name=".PdfEmploi3a"></activity>
+        <activity android:name=".Emploi3a" />
+        <activity android:name=".PdfEmploi2a" />
+        <activity android:name=".Emploi2a" />
+        <activity android:name=".veiw_pdf_files" />
+        <activity android:name=".DocummentMatiere" />
+        <activity android:name=".listeMatieres" />
+        <activity android:name=".NewMsgProfActivity" />
         <activity android:name=".ListeMsgsActivity" />
         <activity android:name=".ListeEventsActivity" />
         <activity android:name=".NewEventActivity" />
