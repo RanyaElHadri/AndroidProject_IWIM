@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#edf9fc"
-    tools:context=".ChefFilActivity">
+    tools:context=".deuxtroisA">
+
 
     <include
         android:id="@+id/toolbar_espace_professeur"
@@ -17,29 +18,16 @@
         android:layout_width="274dp"
         android:layout_height="111dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="364dp"
         android:background="#005792"
         android:padding="30dp"
-        android:text="Ajouter l'emploi"
+        android:text="2A"
         android:textColor="#ffffff"
         android:textSize="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/gerer_profs_chef_fil_button"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.496"
 
-    <Button
-        android:id="@+id/gerer_profs_chef_fil_button"
-        android:layout_width="274dp"
-        android:layout_height="111dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="60dp"
-        android:background="#005792"
-        android:padding="30dp"
-        android:text="Gérer les professeurs"
-        android:textColor="#ffffff"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/trois"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -47,14 +35,15 @@
         android:layout_width="274dp"
         android:layout_height="111dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="128dp"
+        android:layout_marginBottom="152dp"
         android:background="#005792"
         android:padding="30dp"
-        android:text="Gérer les étidiants"
+        android:text="3A"
         android:textColor="#ffffff"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
