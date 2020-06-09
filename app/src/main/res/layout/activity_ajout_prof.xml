@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="#edf9fc"
+    tools:context=".ajoutProf">
+
+    <include
+        android:id="@+id/toolbar_espace_professeur"
+        layout="@layout/toolbar"
+        android:layout_width="584dp"
+        android:layout_height="72dp"
+        app:layout_constraintBottom_toTopOf="@+id/deux" />
+
+
+    <EditText
+        android:id="@+id/nomt"
+        android:layout_width="381dp"
+        android:layout_height="95dp"
+        android:layout_gravity="start"
+        android:layout_margin="3dp"
+        android:hint="Nom du professeur"
+        android:inputType="text"
+        android:padding="30dp" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_margin="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:hint="email du professeur"
+        android:padding="30dp"
+        android:layout_gravity="start"/>
+    <EditText
+        android:id="@+id/matiere"
+        android:layout_margin="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:hint="matiere"
+        android:padding="30dp"
+        android:layout_gravity="start"/>
+
+    <EditText
+        android:id="@+id/numtel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:hint="Numero du téléphone"
+        android:inputType="text"
+        android:padding="30dp"
+        android:layout_gravity="start"/>
+    <EditText
+        android:id="@+id/nbreheures"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:hint="Nombre des heures par semaine"
+        android:inputType="text"
+        android:padding="30dp"
+        android:layout_gravity="start"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/saveBtn"
+        android:text="Save"
+        android:layout_gravity="center_horizontal"/>
+
+
+</LinearLayout>
