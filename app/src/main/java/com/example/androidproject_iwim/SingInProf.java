@@ -16,14 +16,14 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class SignInActivity extends AppCompatActivity implements View.OnClickListener{
+public class SingInProf extends AppCompatActivity implements View.OnClickListener{
     public Button signIn;
     private FirebaseAuth mAuth;
     EditText editTextEmail, editTextPassword;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sign_in);
+        setContentView(R.layout.activity_sing_in_prof);
         /*signIn = findViewById(R.id.login);
         signIn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,7 +37,7 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
         mAuth = FirebaseAuth.getInstance();
-        findViewById(R.id.PasEncoreInscris).setOnClickListener(this);
+
         findViewById(R.id.login).setOnClickListener(this);
 
     }
@@ -76,7 +76,7 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
 
-                    Intent intent = new Intent(SignInActivity.this, EspaceEtudiantActivity.class);
+                    Intent intent = new Intent(SingInProf.this, EspaceProfesseurActivity.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent);
                 } else {
@@ -90,9 +90,7 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.PasEncoreInscris:
-                startActivity(new Intent(this, SignUpActivity.class));
-                break;
+
 
             case R.id.login:
                 userLogin();

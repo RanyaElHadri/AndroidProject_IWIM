@@ -1,6 +1,6 @@
 package com.example.androidproject_iwim;
 
-import android.content.Intent;
+import  android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent signInIntent = new Intent(MainActivity.this,SignInActivity.class);
+                Intent signInIntent = new Intent(MainActivity.this,studentOrProf.class);
                 startActivity(signInIntent);
                 finish();
             }

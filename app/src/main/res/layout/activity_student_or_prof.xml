@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#edf9fc"
+    tools:context=".EmploiDuTempsActivity">
+
+    <include
+        android:id="@+id/toolbar_espace_etudiant"
+        layout="@layout/toolbar"
+        app:layout_constraintBottom_toTopOf="@+id/text_emploi_du_temps" />
+
+    <TextView
+        android:id="@+id/text_emploi_du_temps"
+        android:layout_width="389dp"
+        android:layout_height="113dp"
+        android:layout_marginBottom="76dp"
+        android:padding="20dp"
+        android:text="Vous etes etudiant ou professeur?"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#005792"
+        android:textSize="25dp"
+        android:textStyle="bold|italic"
+        app:fontFamily="monospace"
+        app:layout_constraintBottom_toTopOf="@+id/a2_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/a2_button"
+        android:layout_width="313dp"
+        android:layout_height="91dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="64dp"
+        android:background="#005792"
+        android:padding="30dp"
+        android:text="Etudiant"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/a3_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/a3_button"
+        android:layout_width="313dp"
+        android:layout_height="91dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="200dp"
+        android:background="#005792"
+        android:padding="30dp"
+        android:text="Professeur"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

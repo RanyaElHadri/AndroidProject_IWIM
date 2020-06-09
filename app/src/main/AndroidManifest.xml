@@ -2,9 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.androidproject_iwim">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-        <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
-        />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -13,7 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PdfEmploi3a"></activity>
+        <activity android:name=".studentOrProf"></activity>
+        <activity android:name=".SingInProf" />
+        <activity android:name=".PdfEmploi3a" />
         <activity android:name=".Emploi3a" />
         <activity android:name=".PdfEmploi2a" />
         <activity android:name=".Emploi2a" />
@@ -25,14 +26,15 @@
         <activity android:name=".ListeEventsActivity" />
         <activity android:name=".NewEventActivity" />
         <activity android:name=".NewMessageActivity" />
-        <activity android:name=".ChefFilActivity"
-            android:exported="true"/>
+        <activity
+            android:name=".ChefFilActivity"
+            android:exported="true" />
         <activity android:name=".EmploiDuTempsProfActivity" />
         <activity android:name=".MessagerieProfActivity" />
         <activity android:name=".ProfActivity" />
-        <activity android:name=".cheffilupl"
-            android:exported="true"/>
-
+        <activity
+            android:name=".cheffilupl"
+            android:exported="true" />
         <activity android:name=".EspaceProfesseurActivity" />
         <activity android:name=".ExamsActivity" />
         <activity android:name=".deuxtroisA" />
@@ -44,7 +46,6 @@
         <activity android:name=".SignUpActivity" />
         <activity android:name=".SignInActivity" />
         <activity android:name=".MainActivity">
-            
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
