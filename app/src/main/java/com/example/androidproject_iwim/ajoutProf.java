@@ -108,7 +108,7 @@ public class ajoutProf extends AppCompatActivity {
         doc.put("numte", numte);
 
         doc.put("nbreheur", nbreheur);
-        db.collection("Documents").document(id).set(doc)
+        db.collection("Professeur").document(id).set(doc)
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
