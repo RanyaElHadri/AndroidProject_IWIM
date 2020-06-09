@@ -61,7 +61,7 @@ public class NewMsgProfActivity extends AppCompatActivity {
 
             mProgress.dismiss();
 
-            startActivity(new Intent(NewMsgProfActivity.this,ListeMsgsActivity.class));
+            startActivity(new Intent(NewMsgProfActivity.this,ListesMsgsProfMsgsActivity.class));
 
         }
 
