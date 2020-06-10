@@ -21,6 +21,7 @@
         <activity android:name=".veiw_pdf_files" />
         <activity android:name=".DocummentMatiere" />
         <activity android:name=".listeMatieres" />
+        <activity android:name=".Model" />
         <activity android:name=".NewMsgProfActivity" />
         <activity android:name=".ListeMsgsActivity" />
         <activity android:name=".ListeEventsActivity" />
@@ -28,6 +29,11 @@
         <activity android:name=".NewMessageActivity" />
         <activity android:name=".ajoutProf"
             android:exported="true"/>
+
+        <activity android:name=".ListActivty"
+            android:exported="true"/>
+
+
         <activity
             android:name=".ChefFilActivity"
             android:exported="true" />
