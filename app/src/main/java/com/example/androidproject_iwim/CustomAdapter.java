@@ -1,6 +1,9 @@
 package com.example.androidproject_iwim;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -56,7 +59,41 @@ public class CustomAdapter extends RecyclerView.Adapter<ViewHolder> {
         }
 
         @Override
-        public void OnItemLongClick(View view, int position) {
+        public void OnItemLongClick(View view, final int position) {
+
+            AlertDialog.Builder builder = new AlertDialog.Builder(listActivty);
+            String[] options = {"Update", "Delete"} ;
+            builder.setItems(options, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    if (which==0){
+                        String id = modelList.get(position).getId();
+                        String nom = modelList.get(position).getNom();
+                        String email = modelList.get(position).getEmail();
+                        String matiere = modelList.get(position).getMatiere();
+                        String numTel = modelList.get(position).getNumtel();
+                        String nbreHeures = modelList.get(position).getNbreheur();
+
+                        Intent intent = new  Intent(listActivty,ajoutProf.class);
+                        intent.putExtra("pit", id);
+                        intent.putExtra("pnom",nom );
+                        intent.putExtra("pemail", email);
+                        intent.putExtra("pmatiere", matiere);
+                        intent.putExtra("pnumTel", numTel);
+                        intent.putExtra("pnbreHeures", nbreHeures);
+
+                        listActivty.startActivity(intent);
+
+
+                    }
+                    if (which==1){
+                        //delete is clicked
+                        listActivty.deleteData(position);
+
+                    }
+                }
+            }).create().show();
+
 
         }
     });
