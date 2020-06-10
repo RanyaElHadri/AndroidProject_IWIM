@@ -34,7 +34,7 @@ public class MessagerieProfActivity extends AppCompatActivity {
         mConsulterLesMessagesProf.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent listeMsgsActivityIntent = new Intent(MessagerieProfActivity.this, ListeMsgsActivity.class);
+                Intent listeMsgsActivityIntent = new Intent(MessagerieProfActivity.this, ListesMsgsProfMsgsActivity.class);
                 startActivity(listeMsgsActivityIntent);
             }
         });

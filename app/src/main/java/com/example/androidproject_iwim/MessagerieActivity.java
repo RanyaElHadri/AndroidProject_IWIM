@@ -19,9 +19,9 @@ public class MessagerieActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_messagerie);
 
-        mMessagerieActivity = (TextView) findViewById(R.id.text_messagerie_prof);
-        mEnvoyerUnMessage = (Button) findViewById(R.id.envoyer_un_message_prof_button);
-        mConsulterLesMessages = (Button) findViewById(R.id.consulter_les_messages_prof_button);
+        mMessagerieActivity = (TextView) findViewById(R.id.text_messagerie);
+        mEnvoyerUnMessage = (Button) findViewById(R.id.envoyer_un_message_button);
+        mConsulterLesMessages = (Button) findViewById(R.id.consulter_les_messages_button);
 
         mEnvoyerUnMessage.setOnClickListener(new View.OnClickListener() {
             @Override

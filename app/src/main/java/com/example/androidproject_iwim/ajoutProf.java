@@ -1,6 +1,7 @@
 package com.example.androidproject_iwim;
 
 import android.annotation.SuppressLint;
+import android.app.ListActivity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -33,6 +34,7 @@ public class ajoutProf extends AppCompatActivity {
     Button mSavebut,mListeBtn;
     ProgressDialog pd;
     FirebaseFirestore db;
+    String pit, pemail, pnom, pnumtel,pnbreheures,pmatiere;
 
 
     @Override
@@ -49,7 +51,8 @@ public class ajoutProf extends AppCompatActivity {
         mnumtel= findViewById(R.id.numtel);
         mnbreheures= findViewById(R.id.nbreheures);
         mSavebut =findViewById(R.id.saveBtn);
-        //  mListeBtn = findViewById(R.id.listBtn);
+         mListeBtn = findViewById(R.id.listBtn);
+
 
 
 
@@ -57,8 +60,35 @@ public class ajoutProf extends AppCompatActivity {
         pd=  new ProgressDialog(this);
         db = FirebaseFirestore.getInstance();
 
+final Bundle bundle = getIntent().getExtras();
+
+if (bundle!= null) {
+    //update data
+  //  actionBar.setTitle("Update Data");
+//update data
+    mSavebut.setText("Update");
+
+    //get data
+    pit = bundle.getString("pit");
+    pnom = bundle.getString("pnom");
+    pemail = bundle.getString("pemail");
+    pmatiere = bundle.getString("pmatiere");
+    pnumtel = bundle.getString("pnumTel");
+    pnbreheures = bundle.getString("pnbreHeures");
+//set data
+    mnom.setText(pnom);
+    memail.setText(pemail);
+    mmatiere.setText(pmatiere);
+    mnumtel.setText(pnumtel);
+    mnbreheures.setText(pnbreheures);
 
 
+
+} else {
+    // new data
+
+    mSavebut.setText("Save");
+}
 
 
         //  getSupportActionBar().setTitle("");
@@ -66,32 +96,77 @@ public class ajoutProf extends AppCompatActivity {
         mSavebut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String no= mnom.getText().toString().trim();
+
+            Bundle bundle1 = getIntent().getExtras();
+            if(bundle!=null){
+                      //updating
+                //input data
+                String id = pit;
+                String no = mnom.getText().toString().trim();
                 String emai = memail.getText().toString().trim();
-                String matier= mmatiere.getText().toString().trim();
+                String matier = mmatiere.getText().toString().trim();
                 String numte = mnumtel.getText().toString().trim();
                 String nbreheur = mnbreheures.getText().toString().trim();
                 //fonction call to upload cata
-                uploadData(no,emai,matier,numte,nbreheur);
+                uploadData(id,no, emai, matier, numte, nbreheur);
 
+            }
+            else {
+                // adding new
+                //input data
+                String no = mnom.getText().toString().trim();
+                String emai = memail.getText().toString().trim();
+                String matier = mmatiere.getText().toString().trim();
+                String numte = mnumtel.getText().toString().trim();
+                String nbreheur = mnbreheures.getText().toString().trim();
+                //fonction call to upload cata
+                uploadData(no, emai, matier, numte, nbreheur);
+            }
             }
         });
 
 
-     /*   mListeBtn.setOnClickListener(new View.OnClickListener() {
+        mListeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ajoutProf.this,ListActivity.class));
-                finish();
+                Intent intent = new Intent(ajoutProf.this, ListActivty.class);
+                startActivity(intent);
             }
-        });*/
-
+        });
 
 
 
 
 
     }
+
+    private void uploadData(String id, String no, String emai, String matier, String numte, String nbreheur) {
+
+        pd.setTitle("Updating Data...");
+        pd.show();
+
+    db.collection("Professeur").document(id)
+            .update("no",no,"search",no.toLowerCase(),"emai",emai,"matier",matier,"numte",numte,"nbreheur",nbreheur)
+            .addOnCompleteListener(new OnCompleteListener<Void>() {
+                @Override
+                public void onComplete(@NonNull Task<Void> task) {
+                              pd.dismiss();
+                    Toast.makeText(ajoutProf.this, "Updated...", Toast.LENGTH_SHORT).show();
+                }
+            })
+.addOnFailureListener(new OnFailureListener() {
+    @Override
+    public void onFailure(@NonNull Exception e) {
+
+        pd.dismiss();
+        Toast.makeText(ajoutProf.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+
+    }
+});
+
+
+    }
+
     private void uploadData(String no, String emai, String matier, String numte, String nbreheur) {
         //set title of progressbar
         pd.setTitle("Adding Data to Firestore");
@@ -103,6 +178,7 @@ public class ajoutProf extends AppCompatActivity {
         Map<String, Object> doc = new HashMap<>();
         doc.put("id", id); //id of data
         doc.put("nom", no);
+        doc.put("search", no.toLowerCase());
         doc.put("emai", emai);
         doc.put("matier", matier);
         doc.put("numte", numte);
@@ -131,6 +207,10 @@ public class ajoutProf extends AppCompatActivity {
                 });
 
     }
+
+
+
+    //menu
 
 
 }
