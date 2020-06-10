@@ -14,6 +14,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".ListesMsgsProfMsgsActivity"></activity>
         <activity android:name=".PdfEmploi3a" />
+        <activity android:name=".studentOrProf" />
         <activity android:name=".Emploi3a" />
         <activity android:name=".PdfEmploi2a" />
         <activity android:name=".Emploi2a" />
