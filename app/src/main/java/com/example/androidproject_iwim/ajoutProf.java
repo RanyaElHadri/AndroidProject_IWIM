@@ -1,6 +1,7 @@
 package com.example.androidproject_iwim;
 
 import android.annotation.SuppressLint;
+import android.app.ListActivity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -49,7 +50,8 @@ public class ajoutProf extends AppCompatActivity {
         mnumtel= findViewById(R.id.numtel);
         mnbreheures= findViewById(R.id.nbreheures);
         mSavebut =findViewById(R.id.saveBtn);
-        //  mListeBtn = findViewById(R.id.listBtn);
+         mListeBtn = findViewById(R.id.listBtn);
+
 
 
 
@@ -78,14 +80,13 @@ public class ajoutProf extends AppCompatActivity {
         });
 
 
-     /*   mListeBtn.setOnClickListener(new View.OnClickListener() {
+        mListeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ajoutProf.this,ListActivity.class));
-                finish();
+                Intent intent = new Intent(ajoutProf.this, ListActivty.class);
+                startActivity(intent);
             }
-        });*/
-
+        });
 
 
 
