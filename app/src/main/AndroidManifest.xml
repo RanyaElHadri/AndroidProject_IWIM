@@ -18,7 +18,6 @@
         <activity android:name=".PdfEmploi2a" />
         <activity android:name=".Emploi2a" />
         <activity android:name=".veiw_pdf_files" />
-        <activity android:name=".DocummentMatiere" />
         <activity android:name=".listeMatieres" />
         <activity android:name=".NewMsgProfActivity" />
         <activity android:name=".ListeMsgsActivity" />
@@ -43,6 +42,12 @@
         <activity android:name=".EspaceEtudiantActivity" />
         <activity android:name=".SignUpActivity" />
         <activity android:name=".SignInActivity" />
+        <activity android:name=".SingInProf" />
+        <activity android:name=".studentOrProf" />
+        <activity android:name=".EtudiantOuDelegue" />
+
+
+
         <activity android:name=".MainActivity">
             
             <intent-filter>
