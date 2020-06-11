@@ -5,74 +5,57 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#edf9fc"
-    tools:context=".EspaceEtudiantActivity">
+    tools:context=".EvenementsActivity">
 
     <include
         android:id="@+id/toolbar_espace_etudiant"
         layout="@layout/toolbar"
-        app:layout_constraintBottom_toTopOf="@+id/text_espace_etudiant" />
+        app:layout_constraintBottom_toTopOf="@+id/text_evenements" />
 
     <TextView
-        android:id="@+id/text_espace_etudiant"
+        android:id="@+id/text_evenements"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="64dp"
+        android:layout_marginBottom="52dp"
         android:padding="20dp"
-        android:text="Espace étudiant"
+        android:text="Événements"
         android:textColor="#005792"
         android:textSize="25dp"
-        app:layout_constraintBottom_toTopOf="@+id/messagerie_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/messagerie_button"
-        android:layout_width="232dp"
-        android:layout_height="0dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="48dp"
-        android:background="#005792"
-        android:padding="30dp"
-        android:text="Messagerie"
-        android:textColor="#ffffff"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/evenements_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"/>
-
-    <Button
-        android:id="@+id/evenements_button"
-        android:layout_width="232dp"
-        android:layout_height="0dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="40dp"
-        android:background="#005792"
-        android:padding="30dp"
-        android:text="Evénements"
-        android:textColor="#ffffff"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/scolarite_button"
+        app:layout_constraintBottom_toTopOf="@+id/afficher_evenements_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/scolarite_button"
+        android:id="@+id/afficher_evenements_button"
         android:layout_width="232dp"
         android:layout_height="0dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="116dp"
+        android:layout_marginBottom="52dp"
         android:background="#005792"
         android:padding="30dp"
-        android:text="Scolarité"
+        android:text="Afficher événements"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/creer_un_evenement_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/creer_un_evenement_button"
+        android:layout_width="232dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="196dp"
+        android:background="#005792"
+        android:padding="30dp"
+        android:text="Créer un événement"
         android:textColor="#ffffff"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintHorizontal_bias="0.446"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

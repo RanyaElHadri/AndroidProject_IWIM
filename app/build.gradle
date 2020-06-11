@@ -49,10 +49,7 @@ dependencies {
     implementation 'io.paperdb:paperdb:2.6'
 
 
-
     implementation 'com.google.android.material:material:1.1.0-alpha10'
-
-
 
 
     implementation "androidx.cardview:cardview:1.0.0"

@@ -36,7 +36,7 @@ public class EspaceEtudiantActivity extends AppCompatActivity {
         mEvenemets.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent evenementsActivityIntent = new Intent(EspaceEtudiantActivity.this, EvenementsActivity.class);
+                Intent evenementsActivityIntent = new Intent(EspaceEtudiantActivity.this, ListeEventsActivity.class);
                 startActivity(evenementsActivityIntent);
             }
         });
