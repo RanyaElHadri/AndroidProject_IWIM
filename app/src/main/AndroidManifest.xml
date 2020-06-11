@@ -31,6 +31,12 @@
         <activity android:name=".ProfActivity" />
         <activity android:name=".cheffilupl"
             android:exported="true"/>
+        <activity android:name=".ajoutProf"
+            android:exported="true"/>
+        <activity android:name=".CustomAdapter"
+            android:exported="true"/>
+
+
 
         <activity android:name=".EspaceProfesseurActivity" />
         <activity android:name=".ExamsActivity" />
@@ -44,6 +50,8 @@
         <activity android:name=".SignInActivity" />
         <activity android:name=".SingInProf" />
         <activity android:name=".studentOrProf" />
+        <activity android:name=".ListActivty"
+            android:exported="true"/>
         <activity android:name=".EtudiantOuDelegue" />
 
 

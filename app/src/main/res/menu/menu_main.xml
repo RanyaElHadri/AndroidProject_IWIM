@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <include
-        android:id="@+id/toolbar_espace_professeur"
-        layout="@layout/toolbar"
-        android:layout_width="584dp"
-        android:layout_height="72dp"
-        app:layout_constraintBottom_toTopOf="@+id/deux" />
 
-  <item  android:id="@+id/action_search"
+  <item
+
+
+      android:id="@+id/action_search"
     android:icon="@drawable/ic_menu_search"
     android:title="Search"
 
