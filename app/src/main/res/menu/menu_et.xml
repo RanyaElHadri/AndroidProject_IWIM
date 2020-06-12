@@ -3,20 +3,20 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-  <item
+    <item
 
 
-      android:id="@+id/action_search"
-    android:icon="@drawable/ic_menu_search"
-    android:title="Search"
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_menu_search"
+        android:title="Search"
 
-    app:showAsAction="always" />
+        app:showAsAction="always" />
 
     <item
         android:id="@+id/action_setting"
         android:title="Settings"
 
-/>
+        />
 </menu>
 
 

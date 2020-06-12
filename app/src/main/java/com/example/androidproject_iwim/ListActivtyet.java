@@ -26,9 +26,9 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListActivty extends AppCompatActivity {
+public class ListActivtyet extends AppCompatActivity {
 
-    List<com.example.androidproject_iwim.Model> modelList = new ArrayList<>();
+    List<com.example.androidproject_iwim.Modelet> modelList = new ArrayList<>();
 
     RecyclerView mRecyclerView;
 
@@ -37,7 +37,7 @@ public class ListActivty extends AppCompatActivity {
     RecyclerView.LayoutManager layoutManager;
     FirebaseFirestore db;
 
-    CustomAdapter adapter;
+    CustomAdapteret adapter;
     ProgressDialog pd;
 
 
@@ -45,8 +45,8 @@ public class ListActivty extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list);
-//        setHasOptionsMenu(true);
+        setContentView(R.layout.activity_listet);
+//       setHasOptionsMenu(true);
 
 
         db = FirebaseFirestore.getInstance();
@@ -71,7 +71,7 @@ public class ListActivty extends AppCompatActivity {
         mAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ListActivty.this,ajoutProf.class));
+                startActivity(new Intent(ListActivtyet.this,ajoutEtud.class));
                 finish();
             }
         });
@@ -85,7 +85,7 @@ public class ListActivty extends AppCompatActivity {
         pd.show();
 
 
-        db.collection("Professeur")
+        db.collection("Etudiants")
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
@@ -94,7 +94,7 @@ public class ListActivty extends AppCompatActivity {
                         pd.dismiss();
 
                         for (DocumentSnapshot doc : task.getResult()) {
-                            com.example.androidproject_iwim.Model model = new com.example.androidproject_iwim.Model(doc.getString("id"),
+                            com.example.androidproject_iwim.Modelet model = new com.example.androidproject_iwim.Modelet(doc.getString("id"),
                                     doc.getString("no"),
                                     doc.getString("emai"),
                                     doc.getString("numte"),
@@ -105,7 +105,7 @@ public class ListActivty extends AppCompatActivity {
 
                             modelList.add(model);
                         }
-                        adapter = new CustomAdapter(ListActivty.this, modelList);
+                        adapter = new CustomAdapteret(ListActivtyet.this, modelList);
                         mRecyclerView.setAdapter(adapter);
                     }
                 })
@@ -113,7 +113,7 @@ public class ListActivty extends AppCompatActivity {
                     @Override
                     public void onFailure(@NonNull Exception e) {
                         pd.dismiss();
-                        Toast.makeText(ListActivty.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(ListActivtyet.this, e.getMessage(), Toast.LENGTH_SHORT).show();
 
                     }
                 });
@@ -127,12 +127,12 @@ public class ListActivty extends AppCompatActivity {
 
         pd.show();
 
-        db.collection("Professeur").document(modelList.get(index).getId())
+        db.collection("Etudiants").document(modelList.get(index).getId())
                 .delete()
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
-                        Toast.makeText(ListActivty.this,"Deleted...", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(ListActivtyet.this,"Deleted...", Toast.LENGTH_SHORT).show();
                         showData();
 
                     }
@@ -141,18 +141,18 @@ public class ListActivty extends AppCompatActivity {
                     @Override
                     public void onFailure(@NonNull Exception e) {
                         pd.dismiss();
-                        Toast.makeText(ListActivty.this,e.getMessage(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(ListActivtyet.this,e.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 });
 
-        }
+    }
     private void searchData(String query) {
 
 //set title of progressbar
         pd.setTitle("Searching...");
         //show progress bar when user click save button
         pd.show();
-        db.collection("Professeur").whereEqualTo("search",query.toLowerCase())
+        db.collection("Etudiants").whereEqualTo("search",query.toLowerCase())
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
@@ -160,7 +160,7 @@ public class ListActivty extends AppCompatActivity {
                         modelList.clear();
                         pd.dismiss();
                         for (DocumentSnapshot doc : task.getResult()) {
-                            com.example.androidproject_iwim.Model model = new com.example.androidproject_iwim.Model(doc.getString("id"),
+                            com.example.androidproject_iwim.Modelet model = new com.example.androidproject_iwim.Modelet(doc.getString("id"),
                                     doc.getString("nom"),
                                     doc.getString("emai"),
                                     doc.getString("numte"),
@@ -171,7 +171,7 @@ public class ListActivty extends AppCompatActivity {
                             );
                             modelList.add(model);
                         }
-                        adapter = new CustomAdapter(ListActivty.this, modelList);
+                        adapter = new CustomAdapteret(ListActivtyet.this, modelList);
                         mRecyclerView.setAdapter(adapter);
 
 
@@ -183,12 +183,12 @@ public class ListActivty extends AppCompatActivity {
                     @Override
                     public void onFailure(@NonNull Exception e) {
                         pd.dismiss();
-                        Toast.makeText(ListActivty.this,e.getMessage(),Toast.LENGTH_SHORT).show();
+                        Toast.makeText(ListActivtyet.this,e.getMessage(),Toast.LENGTH_SHORT).show();
                     }
                 });
     }
 
-  //menu
+    //menu
 
 
     @Override
@@ -198,7 +198,7 @@ public class ListActivty extends AppCompatActivity {
     inflater.inflate(R.menu.menu_main, menu);
     return true; */
 
-        getMenuInflater().inflate(R.menu.menu_main,menu);
+        getMenuInflater().inflate(R.menu.menu_et,menu);
         MenuItem item = menu.findItem(R.id.action_search);
         final SearchView searchView = (SearchView) MenuItemCompat.getActionView(item);
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener()
@@ -208,10 +208,10 @@ public class ListActivty extends AppCompatActivity {
 
                                               @Override
                                               public boolean onQueryTextSubmit(String query) {
-                                                //called when we press search button entered in searchview as paramater
+                                                  //called when we press search button entered in searchview as paramater
 
 
-                                                    searchData(query); //function call with string
+                                                  searchData(query); //function call with string
 
                                                   return false;
                                               }

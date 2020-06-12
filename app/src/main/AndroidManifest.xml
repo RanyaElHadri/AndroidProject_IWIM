@@ -39,10 +39,19 @@
             android:name=".cheffilupl"
             android:exported="true" />
         <activity
+            android:name=".ListActivtyet"
+            android:exported="true" />
+        <activity
+            android:name=".ajoutEtud"
+            android:exported="true" />
+        <activity
             android:name=".ajoutProf"
             android:exported="true" />
         <activity
             android:name=".CustomAdapter"
+            android:exported="true" />
+        <activity
+            android:name=".CustomAdapteret"
             android:exported="true" />
         <activity android:name=".EspaceProfesseurActivity" />
         <activity android:name=".ExamsActivity" />

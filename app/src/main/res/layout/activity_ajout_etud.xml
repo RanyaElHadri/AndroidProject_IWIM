@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:padding="10dp"
     android:background="#edf9fc"
-    tools:context=".ajoutProf">
+    tools:context=".ajoutEtud">
 
 
     <include
@@ -23,7 +23,7 @@
         android:layout_height="95dp"
         android:layout_gravity="start"
         android:layout_margin="3dp"
-        android:hint="Nom du professeur"
+        android:hint="Nom de l'étudiant"
         android:inputType="text"
         android:padding="30dp" />
 
@@ -33,7 +33,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="text"
-        android:hint="email du professeur"
+        android:hint="email de l'étudiant "
         android:padding="30dp"
         android:layout_gravity="start"/>
     <EditText
@@ -42,7 +42,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="text"
-        android:hint="matiere"
+        android:hint="CNE"
         android:padding="30dp"
         android:layout_gravity="start"/>
 
@@ -60,7 +60,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="2dp"
-        android:hint="Nombre des heures par semaine"
+        android:hint="Nombre d'absences' par semaine"
         android:inputType="text"
         android:padding="30dp"
         android:layout_gravity="start"
