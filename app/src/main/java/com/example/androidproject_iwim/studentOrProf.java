@@ -26,7 +26,7 @@ public class studentOrProf extends AppCompatActivity {
         prof.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent= new Intent(studentOrProf.this, SingInProf.class);
+                Intent intent= new Intent(studentOrProf.this, EspaceProfesseurActivity.class);
                 startActivity(intent);
 
             }

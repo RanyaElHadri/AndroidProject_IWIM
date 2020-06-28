@@ -76,7 +76,7 @@ public class SingInProf extends AppCompatActivity implements View.OnClickListene
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
 
-                    Intent intent = new Intent(SingInProf.this, EspaceProfesseurActivity.class);
+                    Intent intent = new Intent(SingInProf.this, ProfActivity.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent);
                 } else {
