@@ -27,7 +27,7 @@ public class EspaceProfesseurActivity extends AppCompatActivity {
         chef.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent= new Intent(EspaceProfesseurActivity.this, SingInProf.class);
+                Intent intent= new Intent(EspaceProfesseurActivity.this, SingInChef.class);
                 startActivity(intent);
 
             }
